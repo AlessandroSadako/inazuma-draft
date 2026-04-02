@@ -1,0 +1,65 @@
+.field {
+  position: relative;
+  width: 320px;
+  height: 500px;
+  margin: 20px auto;
+  border-radius: 10px;
+  overflow: hidden;
+
+  background: linear-gradient(to bottom,
+      #2e7d32 0%,
+      #388e3c 50%,
+      #2e7d32 100%);
+}
+
+/* linea centrocampo */
+.field::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: white;
+}
+
+/* cerchio centro */
+.field::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* slot giocatori */
+.player-slot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.player-slot:hover {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* pallino placeholder */
+.placeholder {
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
+
+/* immagine giocatore */
+.player-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
