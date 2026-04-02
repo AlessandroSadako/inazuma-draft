@@ -1,0 +1,584 @@
+[
+    {
+        "personaggio": "Acuto",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Acuto-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Almeida",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Almeida-inauzma-3.webp"
+    },
+    {
+        "personaggio": "appleton",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\appleton-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Arachne",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Arachne-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Armand",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Armand-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Arroyo",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Arroyo-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Barboza",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Barboza-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Carlos",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Carlos-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Castillo",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Castillo-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Cerezo",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Cerezo-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Choi",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Choi-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Cole",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Cole-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Corniola",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Corniola-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Crow",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Crow-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Diavolo",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Diavolo-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Dolphin",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Dolphin-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Erik",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Erik-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Ferreira",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Ferreira-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Fisher",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Fisher-inazuma-3.webp"
+    },
+    {
+        "personaggio": "fliedner",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\fliedner-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Gabrini",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Gabrini-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Giorgio",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Giorgio-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Glasya",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Glasya-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Granato",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Granato-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Greenway",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Greenway-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Gunther",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Gunther-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Haddad",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Haddad-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Hampton",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Hampton-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Hang",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Hang-Ten-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Heat",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Heat-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Hedgehog",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Hedgehog-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Hinault",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Hinault-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Huysmans",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Huysmans-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Ientel",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Ientel-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Ines",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Ines-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Ja",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Ja-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Jasim",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Jasim-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Jezebeth",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Jezebeth-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Kim",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Kim-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Krueger",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Krueger-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Kuster",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Kuster-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Leung",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Leung-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Mahlangu",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Mahlangu-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Malphas",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Malphas-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Mane",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Mane-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Mantis",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Mantis-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Marunga",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Marunga-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Massoud",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Massoud-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Maximino",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Maximino-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Mendes",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Mendes-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Moreau",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Moreau-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Moreno",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Moreno-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Nadal",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Nadal-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Nortje",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Nortje-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Nuel",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Nuel-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Oliviero",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Oliviero-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Oster",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Oster-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Owl",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Owl-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Parl",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Parl-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Passos",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Passos-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Perec",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Perec-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Pereira",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Pereira-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Perez",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Perez-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Pierce",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Pierce-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Polk",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Polk-inazuma-3.webp"
+    },
+    {
+        "personaggio": "pooma",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\pooma-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Prawn",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Prawn-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Punding",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Punding-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Purplet",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Purplet-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Quagmire",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Quagmire-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Rabson",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Rabson-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Rajab",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Rajab-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Richards",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Richards-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Roberto",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Roberto-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Rossa",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Rossa-inauzma-3.webp"
+    },
+    {
+        "personaggio": "rousseau",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\rousseau-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Rubino",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Rubino-inazuma-3.webp"
+    },
+    {
+        "personaggio": "ryan",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\ryan-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Sachinel",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Sachinel-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Samuel",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Samuel-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Sepeng",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Sepeng-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Smeraldo",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Smeraldo-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Stark",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Stark-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Stonewall",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Stonewall-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Stoutberg",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Stoutberg-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Sulaiman",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Sulaiman-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Summers",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Summers-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Tom",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Tom-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Topazio",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Topazio-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Triumvir",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Triumvir-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Ulrich",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Ulrich-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Vitrum",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Vitrum-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Wenel",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Wenel-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Woodmark",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Woodmark-inazuma-3.webp"
+    },
+    {
+        "personaggio": "Yi",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Yi-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Zanardi",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Zanardi-inauzma-3.webp"
+    },
+    {
+        "personaggio": "Zebra",
+        "ruolo": "Portiere",
+        "stagione": "3",
+        "link_immagine": "C:\\Users\\aless\\Desktop\\Inazuma\\CentrocampistiInazuma\\Centrocampisti3\\Zebra-inazuma-3.webp"
+    }
+]
