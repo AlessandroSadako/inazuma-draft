@@ -1,18 +1,23 @@
-export default function Field({ formation, team, currentPick }) {
+export default function Field({ formation, team, onPositionClick, selectedIndex }) {
     if (!formation?.positions) return null;
 
     return (
         <div className="field">
             {formation.positions.map((pos, index) => {
-                const isActive = index === currentPick;
+                const isActive = index === selectedIndex;
 
                 return (
                     <div
                         key={index}
                         className="player-slot"
+                        onClick={() => {
+                            if (team[index]) return;
+                            onPositionClick(pos.role, index);
+                        }}
                         style={{
                             top: `${pos.y}%`,
-                            left: `${pos.x}%`
+                            left: `${pos.x}%`,
+                            cursor: "pointer"
                         }}
                     >
                         {team[index] ? (

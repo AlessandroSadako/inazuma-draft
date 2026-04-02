@@ -1,54 +1,40 @@
+/* 🟩 CAMPO */
 .field {
   position: relative;
   width: 320px;
   height: 500px;
   margin: 20px auto;
+  border: 2px solid black;
   border-radius: 10px;
   overflow: hidden;
 
-  background: linear-gradient(to bottom,
-      #2e7d32 0%,
-      #388e3c 50%,
-      #2e7d32 100%);
+  /* sfondo verde */
+  background-color: #2e7d32;
+
+  /* griglia */
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+
+  background-size: 40px 40px;
 }
 
-/* linea centrocampo */
-.field::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: white;
-}
-
-/* cerchio centro */
-.field::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80px;
-  height: 80px;
-  border: 2px solid white;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* slot giocatori */
+/* 🧍 SLOT POSIZIONE */
 .player-slot {
   position: absolute;
+  /* 🔥 QUESTO RISOLVE TUTTO */
   transform: translate(-50%, -50%);
+  text-align: center;
   cursor: pointer;
   transition: 0.2s;
 }
 
+/* ✨ HOVER */
 .player-slot:hover {
   transform: translate(-50%, -50%) scale(1.2);
 }
 
-/* pallino placeholder */
+/* 🔴 PALLINO */
 .placeholder {
   width: 20px;
   height: 20px;
@@ -56,10 +42,46 @@
   border-radius: 50%;
 }
 
-/* immagine giocatore */
+/* 🖼️ GIOCATORE */
 .player-img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 2px solid white;
+  background: black;
+}
+
+/* 🔵 SLOT ATTIVO (opzionale se vuoi via classe) */
+.active-slot .placeholder {
+  background: blue;
+}
+
+/* 🧾 TESTO RUOLO */
+.player-slot p {
+  margin: 2px 0 0;
+  font-size: 10px;
+  color: white;
+}
+
+/* 📦 SCELTE GIOCATORI */
+.choice-card {
+  border: 1px solid black;
+  padding: 10px;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.choice-card:hover {
+  transform: scale(1.1);
+}
+
+.field {
+  position: relative;
+  /* 🔥 IMPORTANTISSIMO */
+  width: 320px;
+  height: 500px;
+  margin: 20px auto;
+  border: 2px solid black;
+  background-color: green;
 }

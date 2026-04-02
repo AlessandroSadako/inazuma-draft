@@ -91,7 +91,8 @@ function App() {
           <Field
             formation={formation}
             team={team}
-            currentPick={currentPick} // 🔥 QUESTO MANCA
+            onPositionClick={handlePositionClick}
+            selectedIndex={selectedIndex} // 🔥 QUESTO
           />
 
           <button
