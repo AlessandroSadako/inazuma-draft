@@ -1,38 +1,31 @@
 export default function Field({ formation, team, onPositionClick, selectedIndex }) {
-    if (!formation?.positions) return null;
-
     return (
         <div className="field">
-            {formation.positions.map((pos, index) => {
-                const isActive = index === selectedIndex;
+            {/* Linee del campo */}
+            <div className="field-line mediana"></div>
+            <div className="field-line cerchio"></div>
+            <div className="field-line area-rigore top"></div>
+            <div className="field-line area-porta top"></div>
+            <div className="field-line area-rigore bottom"></div>
+            <div className="field-line area-porta bottom"></div>
 
+            {formation.positions.map((pos, i) => {
+                const player = team[i];
+                const isActive = selectedIndex === i;
+                
                 return (
                     <div
-                        key={index}
-                        className="player-slot"
-                        onClick={() => {
-                            if (team[index]) return;
-                            onPositionClick(pos.role, index);
-                        }}
-                        style={{
-                            top: `${pos.y}%`,
-                            left: `${pos.x}%`,
-                            cursor: "pointer"
-                        }}
+                        key={i}
+                        className={`player-slot ${isActive ? 'active-slot' : ''}`}
+                        style={{ top: `${pos.y}%`, left: `${pos.x}%` }}
+                        onClick={() => onPositionClick(pos.role, i)}
                     >
-                        {team[index] ? (
-                            <img
-                                src={team[index].image}
-                                className="player-img"
-                            />
+                        {player ? (
+                            <img src={player.image} className="player-img" alt={player.name} />
                         ) : (
-                            <div
-                                className="placeholder"
-                                style={{
-                                    backgroundColor: isActive ? "blue" : "red"
-                                }}
-                            />
+                            <div className="placeholder"></div>
                         )}
+                        <span className="player-role-label-on-field">{pos.role}</span>
                     </div>
                 );
             })}

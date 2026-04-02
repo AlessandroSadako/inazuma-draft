@@ -1,87 +1,147 @@
-/* 🟩 CAMPO */
-.field {
-  position: relative;
-  width: 320px;
-  height: 500px;
-  margin: 20px auto;
-  border: 2px solid black;
-  border-radius: 10px;
+/* --- RESET --- */
+html, body, #root {
+  height: 100%;
+  margin: 0;
   overflow: hidden;
-
-  /* sfondo verde */
-  background-color: #2e7d32;
-
-  /* griglia */
-  background-image:
-    linear-gradient(to right, rgba(255, 255, 255, 0.2) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
-
-  background-size: 40px 40px;
-}
-
-/* 🧍 SLOT POSIZIONE */
-.player-slot {
-  position: absolute;
-  /* 🔥 QUESTO RISOLVE TUTTO */
-  transform: translate(-50%, -50%);
-  text-align: center;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-/* ✨ HOVER */
-.player-slot:hover {
-  transform: translate(-50%, -50%) scale(1.2);
-}
-
-/* 🔴 PALLINO */
-.placeholder {
-  width: 20px;
-  height: 20px;
-  background: red;
-  border-radius: 50%;
-}
-
-/* 🖼️ GIOCATORE */
-.player-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid white;
-  background: black;
-}
-
-/* 🔵 SLOT ATTIVO (opzionale se vuoi via classe) */
-.active-slot .placeholder {
-  background: blue;
-}
-
-/* 🧾 TESTO RUOLO */
-.player-slot p {
-  margin: 2px 0 0;
-  font-size: 10px;
+  background-color: #0b0e14;
   color: white;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-/* 📦 SCELTE GIOCATORI */
-.choice-card {
-  border: 1px solid black;
-  padding: 10px;
-  background: white;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.choice-card:hover {
-  transform: scale(1.1);
-}
-
-.field {
+/* --- CAMPO BASE (Strisce Erba) --- */
+.field, .mini-field {
+  background-color: #2e7d32;
   position: relative;
-
-  width: 320px;
-  height: 500px;
-  margin: 20px auto;
-  border: 2px solid black;
-  background-color: green;
+  border: 3px solid white;
+  overflow: hidden;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #2e7d32, #2e7d32 40px,
+    #388e3c 40px, #388e3c 80px
+  );
 }
+
+/* --- LINEE DEL CAMPO (Condivise) --- */
+.field-line {
+  position: absolute;
+  border: 2px solid white;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.field-line.mediana {
+  top: 50%; left: 0;
+  width: 100%; height: 0;
+  border: none;
+  border-top: 2px solid white;
+}
+
+.field-line.cerchio {
+  top: 50%; left: 50%;
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.field-line.area-rigore.top {
+  top: -2px; left: 50%;
+  width: 240px; height: 100px;
+  transform: translateX(-50%);
+}
+
+.field-line.area-porta.top {
+  top: -2px; left: 50%;
+  width: 100px; height: 40px;
+  transform: translateX(-50%);
+}
+
+.field-line.area-rigore.bottom {
+  bottom: -2px; left: 50%;
+  width: 240px; height: 100px;
+  transform: translateX(-50%);
+}
+
+.field-line.area-porta.bottom {
+  bottom: -2px; left: 50%;
+  width: 100px; height: 40px;
+  transform: translateX(-50%);
+}
+
+/* --- AGJIUSTAMENTI PER MINI FIELD --- */
+.mini-field .field-line { border-width: 1px; }
+.mini-field .field-line.mediana { border-top-width: 1px; }
+.mini-field .field-line.cerchio { width: 60px; height: 60px; }
+.mini-field .field-line.area-rigore { width: 120px; height: 50px; }
+.mini-field .field-line.area-porta { width: 50px; height: 20px; }
+
+/* --- DIMENSIONI SPECIFICHE (Campo Ingrandito per distanziare i giocatori) --- */
+.field {
+  width: 520px; /* Aumentato da 480px */
+  height: 720px; /* Aumentato da 650px */
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+
+.mini-field {
+  width: 100%;
+  height: 280px;
+  border-radius: 5px;
+}
+
+/* --- SCHERMATE DI NAVIGAZIONE --- */
+.start-screen { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; background: radial-gradient(circle, #1e3a8a 0%, #0b0e14 100%); }
+.main-title { font-size: 5rem; font-weight: 900; color: #00d2ff; text-shadow: 0 0 20px #00d2ff; margin-bottom: 50px; }
+.play-now-btn { padding: 20px 60px; font-size: 2rem; font-weight: bold; background-color: #00d2ff; border-radius: 50px; cursor: pointer; border: none; }
+.selection-screen { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.formation-grid { display: flex; gap: 20px; }
+.formation-card { background: #1a1f29; border: 2px solid #333; border-radius: 15px; padding: 15px; width: 280px; text-align: center; cursor: pointer; }
+.formation-card:hover { border-color: #00d2ff; transform: translateY(-5px); }
+.mini-dot { position: absolute; width: 10px; height: 10px; background-color: #ffeb3b; border-radius: 50%; transform: translate(-50%, -50%); z-index: 5; box-shadow: 0 0 5px black; }
+
+/* --- LAYOUT GIOCO --- */
+.container { display: flex; flex-direction: column; height: 100vh; max-width: 1500px !important; padding: 10px; margin: 0 auto; }
+.game-layout { flex: 1; display: flex; justify-content: space-between; align-items: center; width: 100%; }
+
+/* SCELTE A SINISTRA (Personaggi Ridotti) */
+.choices-sidebar { 
+  width: 170px; /* Ridotta da 220px */
+}
+
+.choice-card-vertical { 
+  background: #1a1f29; 
+  border: 2px solid #444; 
+  border-radius: 10px; 
+  padding: 10px; 
+  text-align: center; 
+  cursor: pointer; 
+  margin-bottom: 12px;
+}
+
+.choice-card-vertical img { 
+  width: 65px; /* Ridotto drasticamente il personaggio */
+  height: 65px; 
+  object-fit: contain; 
+}
+
+/* GIOCATORI IN CAMPO (Icone ridotte per distanziarli visivamente) */
+.player-slot { position: absolute; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; z-index: 10; cursor: pointer; }
+.player-img { 
+  width: 65px; /* Ridotto da 75px per dare più aria */
+  height: 65px; 
+  border-radius: 50%; 
+  border: 3px solid white; 
+  object-fit: cover; 
+  background: black; 
+}
+.placeholder { width: 30px; height: 30px; background: red; border-radius: 50%; border: 2px solid white; }
+.player-role-label-on-field { font-size: 9px; font-weight: bold; background: rgba(0,0,0,0.8); padding: 1px 5px; border-radius: 4px; margin-top: 4px; }
+.active-slot .placeholder { background: #007bff; box-shadow: 0 0 20px #007bff; }
+
+/* PANCHINA E PULSANTI */
+.subs-section { width: 130px; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 15px; border: 1px solid #444; }
+.player-img-small { width: 55px; height: 55px; border-radius: 50%; border: 2px solid cyan; object-fit: cover; }
+.placeholder-small { width: 35px; height: 35px; background: #444; border-radius: 50%; border: 2px solid #888; margin: 0 auto; }
+.sub-role-label { font-size: 10px; color: #aaa; text-align: center; display: block; }
+.btn-draft-next { padding: 10px 30px; background: #28a745; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
+.select-btn { width: 100%; padding: 10px; background: #00d2ff; color: black; border: none; border-radius: 5px; font-weight: bold; margin-top: 10px; cursor: pointer; }
