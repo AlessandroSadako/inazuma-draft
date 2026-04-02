@@ -1,36 +1,36 @@
-export default function Field({ formation, team, onPositionClick }) {
-
-    if (!formation || !formation.positions) {
-        return <p>NO FORMATION</p>;
-    }
+export default function Field({ formation, team, currentPick }) {
+    if (!formation?.positions) return null;
 
     return (
-        <div
-            style={{
-                position: "relative",
-                width: "300px",
-                height: "500px",
-                margin: "20px auto",
-                background: "green",
-                border: "2px solid black"
-            }}
-        >
-            {formation.positions.map((pos, index) => (
-                <div
-                    key={index}
-                    onClick={() => onPositionClick(pos.role, index)}
-                    style={{
-                        position: "absolute",
-                        top: `${pos.y}%`,
-                        left: `${pos.x}%`,
-                        transform: "translate(-50%, -50%)",
-                        width: "20px",
-                        height: "20px",
-                        background: "red",
-                        borderRadius: "50%"
-                    }}
-                />
-            ))}
+        <div className="field">
+            {formation.positions.map((pos, index) => {
+                const isActive = index === currentPick;
+
+                return (
+                    <div
+                        key={index}
+                        className="player-slot"
+                        style={{
+                            top: `${pos.y}%`,
+                            left: `${pos.x}%`
+                        }}
+                    >
+                        {team[index] ? (
+                            <img
+                                src={team[index].image}
+                                className="player-img"
+                            />
+                        ) : (
+                            <div
+                                className="placeholder"
+                                style={{
+                                    backgroundColor: isActive ? "blue" : "red"
+                                }}
+                            />
+                        )}
+                    </div>
+                );
+            })}
         </div>
     );
 }

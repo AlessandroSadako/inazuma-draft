@@ -44,7 +44,7 @@ function App() {
     setUsedPlayers([...usedPlayers, player.name]);
     setChoices([]);
 
-    setCurrentPick(prev => prev + 1); // 🔥 QUESTO È NUOVO
+    setCurrentPick(prev => prev + 1);; // 🔥 QUESTO È NUOVO
   };
 
   // 🟣 PANCHINA
@@ -67,7 +67,8 @@ function App() {
         formations={formations}
         onSelect={(f) => {
           setFormation(f);
-          setTeam(new Array(f.positions.length).fill(null)); // 🔥 QUESTO
+          setTeam(new Array(f.positions.length).fill(null)); // 🔥 NECESSARIO
+          setCurrentPick(0); // 🔥 reset
         }}
       />
 
@@ -90,7 +91,7 @@ function App() {
           <Field
             formation={formation}
             team={team}
-            onPositionClick={handlePositionClick}
+            currentPick={currentPick} // 🔥 QUESTO MANCA
           />
 
           <button
