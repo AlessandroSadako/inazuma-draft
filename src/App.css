@@ -1,147 +1,381 @@
 /* --- RESET --- */
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
   overflow: hidden;
-  background-color: #0b0e14;
+  background: #0b0e14;
   color: white;
   font-family: 'Segoe UI', sans-serif;
 }
 
-/* --- CAMPO BASE (Strisce Erba) --- */
-.field, .mini-field {
-  background-color: #2e7d32;
-  position: relative;
-  border: 3px solid white;
-  overflow: hidden;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    #2e7d32, #2e7d32 40px,
-    #388e3c 40px, #388e3c 80px
-  );
+/* --- LAYOUT GENERALE --- */
+.container {
+  height: 100vh;
+  max-width: 1400px;
+  /* 🔥 limita larghezza */
+  margin: 0 auto;
+  /* 🔥 centra tutto */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* --- LINEE DEL CAMPO (Condivise) --- */
+.game-layout {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+/* ========================================================= */
+/* ===================== START SCREEN ======================= */
+/* ========================================================= */
+
+.start-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title {
+  font-size: 70px;
+  font-weight: 900;
+  color: #00c6ff;
+  text-shadow: 0 0 20px #00c6ff;
+  margin-bottom: 40px;
+}
+
+.play-now-btn {
+  padding: 18px 60px;
+  font-size: 22px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 40px;
+  color: white;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.play-now-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ========================================================= */
+/* ================== FORMATION SELECT ====================== */
+/* ========================================================= */
+
+.selection-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.selection-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+/* grid */
+.formation-grid {
+  display: flex;
+  gap: 30px;
+}
+
+/* card */
+.formation-card {
+  width: 280px;
+  background: #1a1f29;
+  border: 2px solid #2c3440;
+  border-radius: 16px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.formation-card:hover {
+  border-color: #00c6ff;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 198, 255, 0.2);
+}
+
+.formation-card h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* mini campo */
+.mini-field {
+  width: 100%;
+  height: 260px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid white;
+
+  background-image: repeating-linear-gradient(to bottom,
+      #2e7d32, #2e7d32 40px,
+      #388e3c 40px, #388e3c 80px);
+}
+
+/* linee mini */
+.mini-field .field-line {
+  border-width: 1px;
+}
+
+.mini-field .field-line.cerchio {
+  width: 70px;
+  height: 70px;
+}
+
+/* pallini */
+.mini-dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #ffeb3b;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+/* bottone */
+.select-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+/* ========================================================= */
+/* ======================= CAMPO ============================ */
+/* ========================================================= */
+
+.field {
+  width: 520px;
+  /* 🔥 prima 650 */
+  height: 720px;
+  /* 🔥 proporzionato */
+  border-radius: 12px;
+  position: relative;
+  border: 3px solid white;
+
+  background-image: repeating-linear-gradient(to bottom,
+      #2e7d32, #2e7d32 40px,
+      #388e3c 40px, #388e3c 80px);
+}
+
+/* linee */
 .field-line {
   position: absolute;
   border: 2px solid white;
-  pointer-events: none;
   z-index: 1;
 }
 
 .field-line.mediana {
-  top: 50%; left: 0;
-  width: 100%; height: 0;
-  border: none;
+  top: 50%;
+  width: 100%;
   border-top: 2px solid white;
 }
 
 .field-line.cerchio {
-  top: 50%; left: 50%;
-  width: 120px; height: 120px;
+  top: 50%;
+  left: 50%;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
 
-.field-line.area-rigore.top {
-  top: -2px; left: 50%;
-  width: 240px; height: 100px;
-  transform: translateX(-50%);
+/* ========================================================= */
+/* ===================== GIOCATORI ========================== */
+/* ========================================================= */
+
+.player-slot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
 }
 
-.field-line.area-porta.top {
-  top: -2px; left: 50%;
-  width: 100px; height: 40px;
-  transform: translateX(-50%);
+.player-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid white;
+  background: black;
 }
 
-.field-line.area-rigore.bottom {
-  bottom: -2px; left: 50%;
-  width: 240px; height: 100px;
-  transform: translateX(-50%);
+.placeholder {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background: red;
 }
 
-.field-line.area-porta.bottom {
-  bottom: -2px; left: 50%;
-  width: 100px; height: 40px;
-  transform: translateX(-50%);
-}
+/* ========================================================= */
+/* ======================= OVERLAY ========================== */
+/* ========================================================= */
 
-/* --- AGJIUSTAMENTI PER MINI FIELD --- */
-.mini-field .field-line { border-width: 1px; }
-.mini-field .field-line.mediana { border-top-width: 1px; }
-.mini-field .field-line.cerchio { width: 60px; height: 60px; }
-.mini-field .field-line.area-rigore { width: 120px; height: 50px; }
-.mini-field .field-line.area-porta { width: 50px; height: 20px; }
-
-/* --- DIMENSIONI SPECIFICHE (Campo Ingrandito per distanziare i giocatori) --- */
-.field {
-  width: 520px; /* Aumentato da 480px */
-  height: 720px; /* Aumentato da 650px */
-  margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(0,0,0,0.5);
-}
-
-.mini-field {
+.choices-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 280px;
-  border-radius: 5px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
-/* --- SCHERMATE DI NAVIGAZIONE --- */
-.start-screen { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; background: radial-gradient(circle, #1e3a8a 0%, #0b0e14 100%); }
-.main-title { font-size: 5rem; font-weight: 900; color: #00d2ff; text-shadow: 0 0 20px #00d2ff; margin-bottom: 50px; }
-.play-now-btn { padding: 20px 60px; font-size: 2rem; font-weight: bold; background-color: #00d2ff; border-radius: 50px; cursor: pointer; border: none; }
-.selection-screen { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-.formation-grid { display: flex; gap: 20px; }
-.formation-card { background: #1a1f29; border: 2px solid #333; border-radius: 15px; padding: 15px; width: 280px; text-align: center; cursor: pointer; }
-.formation-card:hover { border-color: #00d2ff; transform: translateY(-5px); }
-.mini-dot { position: absolute; width: 10px; height: 10px; background-color: #ffeb3b; border-radius: 50%; transform: translate(-50%, -50%); z-index: 5; box-shadow: 0 0 5px black; }
-
-/* --- LAYOUT GIOCO --- */
-.container { display: flex; flex-direction: column; height: 100vh; max-width: 1500px !important; padding: 10px; margin: 0 auto; }
-.game-layout { flex: 1; display: flex; justify-content: space-between; align-items: center; width: 100%; }
-
-/* SCELTE A SINISTRA (Personaggi Ridotti) */
-.choices-sidebar { 
-  width: 170px; /* Ridotta da 220px */
+.choices-container {
+  display: flex;
+  gap: 80px;
+  align-items: flex-end;
 }
 
-.choice-card-vertical { 
-  background: #1a1f29; 
-  border: 2px solid #444; 
-  border-radius: 10px; 
-  padding: 10px; 
-  text-align: center; 
-  cursor: pointer; 
-  margin-bottom: 12px;
+/* carte */
+.player-card {
+  width: 180px;
+  height: 260px;
+  border-radius: 16px;
+  padding: 15px;
+  background: linear-gradient(180deg, #e74c3c, #111);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.choice-card-vertical img { 
-  width: 65px; /* Ridotto drasticamente il personaggio */
-  height: 65px; 
-  object-fit: contain; 
+.player-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
 }
 
-/* GIOCATORI IN CAMPO (Icone ridotte per distanziarli visivamente) */
-.player-slot { position: absolute; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; z-index: 10; cursor: pointer; }
-.player-img { 
-  width: 65px; /* Ridotto da 75px per dare più aria */
-  height: 65px; 
-  border-radius: 50%; 
-  border: 3px solid white; 
-  object-fit: cover; 
-  background: black; 
-}
-.placeholder { width: 30px; height: 30px; background: red; border-radius: 50%; border: 2px solid white; }
-.player-role-label-on-field { font-size: 9px; font-weight: bold; background: rgba(0,0,0,0.8); padding: 1px 5px; border-radius: 4px; margin-top: 4px; }
-.active-slot .placeholder { background: #007bff; box-shadow: 0 0 20px #007bff; }
+/* ========================================================= */
+/* ====================== PANCHINA ========================== */
+/* ========================================================= */
 
-/* PANCHINA E PULSANTI */
-.subs-section { width: 130px; background: rgba(255,255,255,0.05); padding: 15px; border-radius: 15px; border: 1px solid #444; }
-.player-img-small { width: 55px; height: 55px; border-radius: 50%; border: 2px solid cyan; object-fit: cover; }
-.placeholder-small { width: 35px; height: 35px; background: #444; border-radius: 50%; border: 2px solid #888; margin: 0 auto; }
-.sub-role-label { font-size: 10px; color: #aaa; text-align: center; display: block; }
-.btn-draft-next { padding: 10px 30px; background: #28a745; color: white; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; }
-.select-btn { width: 100%; padding: 10px; background: #00d2ff; color: black; border: none; border-radius: 5px; font-weight: bold; margin-top: 10px; cursor: pointer; }
+.subs-section {
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.player-img-small {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
+.placeholder-small {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #444;
+}
+
+/* --- HOVER PLAYER CARD --- */
+.player-card {
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+/* effetto hover principale */
+.player-card:hover {
+  transform: translateY(-15px) scale(1.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7),
+    0 0 20px rgba(0, 198, 255, 0.6);
+  z-index: 10;
+}
+
+/* immagine viva */
+.player-card img {
+  transition: 0.25s;
+}
+
+.player-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* glow interno */
+.player-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  opacity: 0;
+  transition: 0.25s;
+}
+
+.player-card:hover::before {
+  opacity: 1;
+  box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.player-card:hover {
+  transform: translateY(-20px) scale(1.1) rotate(-1deg);
+}
+
+.btn-draft-next {
+  padding: 14px 40px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  margin-bottom: 15px;
+}
+
+/* hover */
+.btn-draft-next:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 25px rgba(0, 198, 255, 0.4);
+}
+
+/* click */
+.btn-draft-next:active {
+  transform: scale(0.95);
+}
+
+.container {
+  height: 100vh;
+  max-width: 1400px;
+  /* 🔥 limita larghezza */
+  margin: 0 auto;
+  /* 🔥 centra tutto */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}

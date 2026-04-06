@@ -1,7 +1,7 @@
 export default function Field({ formation, team, onPositionClick, selectedIndex }) {
     return (
         <div className="field">
-            {/* Linee del campo */}
+            {/* Linee campo */}
             <div className="field-line mediana"></div>
             <div className="field-line cerchio"></div>
             <div className="field-line area-rigore top"></div>
@@ -12,20 +12,30 @@ export default function Field({ formation, team, onPositionClick, selectedIndex 
             {formation.positions.map((pos, i) => {
                 const player = team[i];
                 const isActive = selectedIndex === i;
-                
+
                 return (
                     <div
                         key={i}
-                        className={`player-slot ${isActive ? 'active-slot' : ''}`}
+                        className={`player-slot ${isActive ? 'active-slot' : ''} ${!player ? 'empty-slot' : ''}`}
                         style={{ top: `${pos.y}%`, left: `${pos.x}%` }}
-                        onClick={() => onPositionClick(pos.role, i)}
+                        onClick={() => {
+                            if (player) return;
+                            onPositionClick(pos.role, i);
+                        }}
                     >
                         {player ? (
-                            <img src={player.image} className="player-img" alt={player.name} />
+                            <img
+                                src={player.image}
+                                alt={player.name}
+                                className={`player-img ${player.justPicked ? 'player-enter' : ''}`}
+                            />
                         ) : (
                             <div className="placeholder"></div>
                         )}
-                        <span className="player-role-label-on-field">{pos.role}</span>
+
+                        <span className="player-role-label-on-field">
+                            {pos.role}
+                        </span>
                     </div>
                 );
             })}

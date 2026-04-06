@@ -19,7 +19,7 @@ function App() {
   const benchSequence = ["GK", "FW", "FW", "DF", "MF"];
 
   const startSelecting = () => {
-    const shuffled = [...formations].sort(() => 0.5 - Math.random());
+    const shuffled = [...formations].sort(() => Math.random() - 0.5);
     setRandomFormations(shuffled.slice(0, 3));
     setGameState("SELECTING");
   };
@@ -38,12 +38,13 @@ function App() {
       (role === "ANY" || p.role === role) &&
       !usedPlayers.includes(p.name)
     );
-    return filtered.sort(() => 0.5 - Math.random()).slice(0, 3);
+    return filtered.sort(() => Math.random() - 0.5).slice(0, 3);
   };
 
   const handleNextDraft = () => {
     let role = "";
     let index = null;
+
     if (currentPick < formation.positions.length) {
       role = formation.positions[currentPick].role;
       index = currentPick;
@@ -59,56 +60,78 @@ function App() {
 
   const pickPlayer = (player) => {
     if (selectedIndex === null) return;
-    if (typeof selectedIndex === "string" && selectedIndex.startsWith("bench-")) {
+
+    const newPlayer = { ...player, justPicked: true };
+
+    if (typeof selectedIndex === "string") {
       const idx = parseInt(selectedIndex.split("-")[1]);
       const newBench = [...bench];
-      newBench[idx] = player;
+      newBench[idx] = newPlayer;
       setBench(newBench);
     } else {
       const newTeam = [...team];
-      newTeam[selectedIndex] = player;
+      newTeam[selectedIndex] = newPlayer;
       setTeam(newTeam);
     }
+
     setUsedPlayers([...usedPlayers, player.name]);
     setChoices([]);
     setSelectedIndex(null);
     setCurrentPick(prev => prev + 1);
+
+    // rimuove animazione
+    setTimeout(() => {
+      setTeam(prev =>
+        prev.map(p => p ? { ...p, justPicked: false } : p)
+      );
+      setBench(prev =>
+        prev.map(p => p ? { ...p, justPicked: false } : p)
+      );
+    }, 400);
   };
 
+  // --- START SCREEN ---
   if (gameState === "START") {
     return (
       <div className="start-screen">
         <h1 className="main-title">INAZUMA DRAFT</h1>
-        <button className="play-now-btn" onClick={startSelecting}>PLAY NOW</button>
+        <button className="play-now-btn" onClick={startSelecting}>
+          PLAY NOW
+        </button>
       </div>
     );
   }
 
+  // --- SELECT FORMATION ---
   if (gameState === "SELECTING") {
     return (
       <div className="selection-screen">
-        <h2 className="mb-5 text-uppercase fw-bold">Scegli il tuo Modulo</h2>
+        <h2 className="mb-5 text-uppercase fw-bold">
+          Scegli il tuo Modulo
+        </h2>
+
         <div className="formation-grid">
           {randomFormations.map((f, i) => (
-            <div key={i} className="formation-card" onClick={() => startGame(f)}>
+            <div
+              key={i}
+              className="formation-card"
+              onClick={() => startGame(f)}
+            >
               <h3>{f.name}</h3>
+
               <div className="mini-field">
-                {/* Linee decorative del campo */}
                 <div className="field-line mediana"></div>
                 <div className="field-line cerchio"></div>
-                <div className="field-line area-rigore top"></div>
-                <div className="field-line area-porta top"></div>
-                <div className="field-line area-rigore bottom"></div>
-                <div className="field-line area-porta bottom"></div>
-                
+
                 {f.positions.map((pos, idx) => (
-                  <div 
-                    key={idx} 
-                    className="mini-dot" 
+                  <div
+                    key={idx}
+                    className="mini-dot"
                     style={{ top: `${pos.y}%`, left: `${pos.x}%` }}
-                  ></div>
+                  />
                 ))}
               </div>
+
               <button className="select-btn">SELEZIONA</button>
             </div>
           ))}
@@ -117,22 +140,24 @@ function App() {
     );
   }
 
+  // --- GAME ---
   return (
     <div className="container">
       <div className="game-layout">
-        <div className="choices-sidebar">
-          <PlayerChoices choices={choices} onPick={pickPlayer} />
-        </div>
 
         <div className="field-section">
           <h2 className="formation-title">{formation.name}</h2>
+
           <button
             className="btn-draft-next mb-3"
             disabled={currentPick >= formation.positions.length + 5}
             onClick={handleNextDraft}
           >
-            {currentPick < formation.positions.length ? "Draft Next" : "Draft Bench"}
+            {currentPick < formation.positions.length
+              ? "Draft Next"
+              : "Draft Bench"}
           </button>
+
           <Field
             formation={formation}
             team={team}
@@ -146,16 +171,36 @@ function App() {
 
         <div className="subs-section">
           <h3 className="fs-6 text-uppercase mb-3">Panchina</h3>
+
           <div className="subs-list">
             {bench.map((player, i) => (
-              <div key={i} className={`sub-slot ${selectedIndex === `bench-${i}` ? 'active-slot' : ''}`}>
-                {player ? <img src={player.image} className="player-img-small" /> : <div className="placeholder-small"></div>}
-                <span className="sub-role-label">{benchSequence[i]}</span>
+              <div
+                key={i}
+                className={`sub-slot ${selectedIndex === `bench-${i}` ? "active-slot" : ""
+                  }`}
+              >
+                {player ? (
+                  <img src={player.image} className="player-img-small" />
+                ) : (
+                  <div className="placeholder-small"></div>
+                )}
+                <span className="sub-role-label">
+                  {benchSequence[i]}
+                </span>
               </div>
             ))}
           </div>
         </div>
       </div>
+
+      {/* 🔥 OVERLAY */}
+      {choices.length > 0 && (
+        <div className="choices-overlay">
+          <div className="choices-container">
+            <PlayerChoices choices={choices} onPick={pickPlayer} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
